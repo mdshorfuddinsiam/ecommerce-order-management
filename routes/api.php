@@ -15,8 +15,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Super Admin
     Route::middleware('role:super_admin')->group(function () {
-        Route::get('/products', [ProductController::class, 'index']);
-        Route::get('/outlets', [OutletController::class, 'index']);
+        Route::get('/products', [ProductController::class, 'productLists']);
+        Route::get('/outlets', [OutletController::class, 'outletLists']);
     });
 
     // Admin & Super Admin
